@@ -56,26 +56,14 @@ resp, err := cli.SendMessage(context.Background(), chatID, msg)
 // chatID is the ID of the chat you want to send the message to, can be a group or the same number as the spoofed user ID
 ```
 
-## POC
-
-[Watch the video](https://youtu.be/_WL6hpAvNh8)
-
-[![Watch the video](https://img.youtube.com/vi/_WL6hpAvNh8/hqdefault.jpg)](https://youtu.be/_WL6hpAvNh8)
-
-![poc_whatsapp_spoofing-impersonate-of-reply-message.png](files/poc_whatsapp_spoofing-impersonate-of-reply-message.png)
-
 ## Exploit
 
 #### Clone the repository.
 
-```bash
-git clone https://github.com/lichti/whats-spoofing.git
-```
 
 ### Install dependencies.
 
 ```bash
-cd whats-spoofing
 go mod download
 go get 
 ```
