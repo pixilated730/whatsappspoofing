@@ -1,4 +1,4 @@
-module github.com/lichti/whats-spoofing
+module github.com/kevzy/whatsappspoofing
 
 go 1.21
 
@@ -27,6 +27,6 @@ require (
 	rsc.io/qr v0.2.0 // indirect
 )
 
-replace github.com/lichti/whats-spoofing => ./
+replace github.com/kevzy/whatsappspoofing => ./
 
 replace go.mau.fi/whatsmeow => ./whatsmeow
