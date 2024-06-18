@@ -2,26 +2,6 @@
 send 
 All official WhatsApp clients, upon receiving a "Message Reply" payload (QuotedMessage), do not validate whether the "ContextInfo" of this "QuotedMessage" is valid/exists ("StanzaId" and "Participant"). This allows a malicious actor to send in private chats or groups a "QuotedMessage" of a message that never existed on behalf of another person. This is highly critical and dangerous.
 
-## Impact
-
-Malicious individuals can use this to create issues such as:
-
-- Arguments between couples
-- Sextortion scams
-- Frauds against financial institutions
-- In Brazil, someone could take a cellphone to a notary office to register a "Notarial Act" to create a record that could be used in legal proceedings, claiming that the original message was deleted but keeping the evidence of the "QuotedMessage."
-- Creating embarrassing situations involving public figures (famous actors, politicians, etc.)
-
-## What Meta/Facebook said about this
-
-Hi Gustavo,
-
-Thanks for your report. This issue has been reported to us before, and we consider it to be an accepted risk. When someone replies to a message, the WhatsApp client copies the text available within the app and creates a graphical representation that helps people follow the conversation, the owner of this quoted message is always the person replying to the original message. WhatsApp uses end to end encryption and doesn’t store messages on its servers, therefore we don’t have a single source of truth for these messages. People always have the option of blocking a sender who tries to spoof messages and they can report problematic content to us. Although we appreciate the report, such issues do not qualify under our bug bounty program.
-
-Thanks,
-
-Teo
-
 ## App Versions
 
 Latest version on all platforms
@@ -118,9 +98,4 @@ send-spoofed-demo <toGender:boy|girl> <language:br|en> <chat_jid> <spoofed_jid>
 send-spoofed-demo-img <toGender:boy|girl> <language:br|en> <spoofed_jid> <spoofed_img>
 ```
 
-send-spoofed-demo boy en 254706310869 254706310869 254798978585
-
-send-spoofed-demo boy en 120363044658569467@g.us 254798978585
-
-send-spoofed-demo boy en 254798978585 254798978585
 
